@@ -1,0 +1,302 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Auto Advisor</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static  "css/bootstrap.min.css" %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static  "css/landing-page.css" %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static  "font-awesome/css/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="{% static  "css/nouislider.min.css" %}" rel="stylesheet">
+    <link href="http://brianreavis.github.io/selectize.js/css/selectize.default.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="#"><span style="font-size: 22px">Auto Advisor</span> &nbsp;Beta</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>Get Your Personal Car Recommendation</h1>
+                        <h3>It's easy! Provide your preferences below!</h3>
+                        <div class='get-started'>
+                          <h4>Get Started</h4>
+                          <h6><span class="glyphicon glyphicon-arrow-down scroll-button"></span></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+    <!-- Page Content -->
+
+    <div class="content-section-a" id="first-question">
+      <div class="container">
+        <div class="title">
+          <span class="bold">Question 1:</span> What is your price range?
+        </div>
+        <div id="range"></div>
+      </div>
+    </div>
+    <div class="content-section-b">
+        <div class="container">
+          <div class="title">
+            <span class="bold">Question 2:</span> What will be your main use for this vehicle?
+          </div>
+          <div class="row use">
+            <div class="col-md-2 col-sm-offset-1 radio-wrap">
+              <div class="radio-container"><input type="radio" name="use"></div>
+              <div class="radio-label">Long Commute</div>
+            </div>
+            <div class="col-sm-2 radio-wrap">
+              <div class="radio-container"><input type="radio" name="use"></div>
+              <div class="radio-label">Short Commute</div>
+            </div>
+            <div class="col-sm-2 radio-wrap">
+              <div class="radio-container"><input type="radio" name="use"></div>
+              <div class="radio-label">Errands around town</div>
+            </div>
+            <div class="col-sm-2 radio-wrap">
+              <div class="radio-container"><input type="radio" name="use"></div>
+              <div class="radio-label">Weekend trips</div>
+            </div>
+            <div class="col-sm-2 radio-wrap">
+              <div class="radio-container"><input type="radio" name="use"></div>
+              <div class="radio-label">Other</div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="content-section-a">
+      <div class="container">
+        <div class="title">
+          <span class="bold">Question 3:</span> How important is fuel economy for you?
+        </div>
+        <div class="row slider">
+          <div id="step-slider"></div>
+          <div class="col-sm-4">
+              Not Important
+          </div>
+          <div class="col-sm-4">
+              Medium Important
+          </div>
+          <div class="col-sm-4">
+              Very Important
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section-b">
+      <div class="container">
+        <div class="title">
+          <span class="bold">Question 4:</span> How many seats do you require?
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section-a">
+      <div class="container">
+        <div class="title">
+          <span class="bold">Question 5:</span> Do you plan to drive this vehicle in the snow?
+        </div>
+        <ul>
+          <li><input type="checkbox"> Yes, and all-wheel drive is a must-have</li>
+          <li><input type="checkbox"> Yes, though I do not require all-wheel drive</li>
+          <li><input type="checkbox"> No</li>
+        <ul>
+      </div>
+    </div>
+
+    <div class="content-section-b">
+      <div class="container">
+        <div class="title">
+          <span class="bold">Question 6:</span> How important is reliability to you?
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section-a">
+      <div class="container">
+        <div class="title">
+          <span class="bold">Question 7:</span> What ride/handling characteristics do you prefer?
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section-b">
+      <div class="container">
+        <div class="title">
+          <span class="bold">Question 8:</span> How much power do you require the vehicle to have?
+        </div>
+        <ul>
+          <li><input type="checkbox"> I don’t require much power, especially if it means good MPG</li>
+          <li><input type="checkbox"> Enough that I can make it up any hill easily</li>
+          <li><input type="checkbox"> A good amount of power—I enjoy spirited driving</li>
+          <li><input type="checkbox"> I'd like a very powerful vehicle</li>
+        <ul>
+      </div>
+    </div>
+
+    <div class="content-section-a">
+      <div class="container">
+        <div class="title">
+          <span class="bold">Question 9:</span> Are there any brands that you would like to <b>exclude</b> from your search?
+        </div>
+
+        <div class="input-tags">
+          <input type="text" id="input-tags">
+        </div>
+      </div>
+    </div>
+	<a  name="contact"></a>
+    <div class="banner">
+        <div class="container">
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#services">Services</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">Copyright &copy; Auto Advisor 2017. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{% static  "js/jquery.js" %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static  "js/bootstrap.min.js" %}"></script>
+    <script src="{% static  "js/wNumb.js" %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/8.2.1/nouislider.min.js"></script>
+    <script src="http://brianreavis.github.io/selectize.js/js/selectize.js"></script>
+    <script>
+        $(".scroll-button").click(function() {
+          $('html,body').animate({
+              scrollTop: $("#first-question").offset().top},
+              'slow');
+        });
+        var stepSlider = $('#step-slider');
+        noUiSlider.create(stepSlider[0], {
+        	start: [ 2 ],
+        	step: 1,
+        	range: {min: 1, max: 3}
+        });
+
+        var slider = $('#range');
+        noUiSlider.create(slider[0], {
+        	start: [15000, 25000],
+        	range: { min: 10000, max: 50000 },
+          step: 200,
+          connect: true,
+          tooltips: true,
+          format: wNumb({
+        		decimals: 0,
+        		thousand: ',',
+        		prefix: '$',
+        	})
+        });
+
+        $('#input-tags').selectize({
+            delimiter: ',',
+            persist: false,
+            valueField: 'id',
+            labelField: 'name',
+            searchField: ['name'],
+            create: function(input) {
+                return {
+                    value: input,
+                    text: input
+                }
+            },
+            options: [
+              {id: 1, name: "Chrysler"},
+              {id: 2, name: "Fiat"},
+              {id: 3, name: "Ford"}
+              ]
+        });
+    </script>
+
+</body>
+
+</html>
